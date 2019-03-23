@@ -1,0 +1,7 @@
+#key : column2
+#name : Org-re-reveal make two columns
+#contributor: Muhammad Yusuf <muhammad.yusuf@gmail.com>
+# --
+#+REVEAL_HTML: <div class="column-2">
+$0
+#+REVEAL_HTML: </div>

@@ -1,0 +1,10 @@
+#key : imagebackground
+#name : Org-re-reveal make background image
+#contributor: Muhammad Yusuf <muhammad.yusuf@gmail.com>
+# --
+:PROPERTIES:
+:reveal_background: $1
+:reveal_background_trans: slide
+:END:
+
+$0

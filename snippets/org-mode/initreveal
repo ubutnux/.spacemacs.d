@@ -1,0 +1,34 @@
+#key : initreveal
+#name : Org-re-reveal initialization
+#contributor: Muhammad Yusuf <muhammad.yusuf@gmail.com>
+# --
+#+REVEAL_ROOT: reveal.js
+#+REVEAL_EXTRA_CSS: ./css/main.css
+
+#+REVEAL_TITLE_SLIDE: title-slide.html
+#+OPTIONS: toc:nil num:nil
+
+# Enable: browser history, fragment IDs in URLs, mouse wheel, links between presentations
+#+OPTIONS: reveal_history:t reveal_fragmentinurl:t
+#+OPTIONS: reveal_mousewheel:t reveal_inter_presentation_links:t
+
+# Disable separate PDF pages for each fragment.  Just use one per slide.
+#+OPTIONS: reveal_pdfseparatefragments:nil
+
+# Enable smart quotes
+#+OPTIONS: ':t
+
+# Transition styles: none/fade/slide/convex/concave/zoom/cube
+#+REVEAL_TRANS: concave
+#+REVEAL_THEME: white
+#+REVEAL_HTML: <style>.reveal section img { background:none; border:none; box-shadow:none; }
+#+REVEAL_HTML: </style>
+
+#+TITLE: $1
+#+AUTHOR: $2
+#+DATE: $3
+
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: titleback @@html:<span style="background:$1;padding:10px"><font color="white">$2</font></span>@@
+
+$0

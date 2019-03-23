@@ -1,0 +1,9 @@
+#key : videobackground
+#name : Org-re-reveal make background video
+#contributor: Muhammad Yusuf <muhammad.yusuf@gmail.com>
+# --
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-background-video="$1"; data-background-video-loop="loop"; data-background-size="contain"; data-background-video-muted="true"
+:END:
+
+$0
