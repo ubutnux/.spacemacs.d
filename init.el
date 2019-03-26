@@ -44,7 +44,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-snippets-in-popup t)
      bibtex
      helm
-     ipython-notebook
+     ;; ipython-notebook
      ;; better-defaults
      emacs-lisp
      git
@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(org-re-reveal
                                       org-re-reveal-ref
+                                      ob-ipython
                                       ox-hugo)
 
    ;; A list of packages that cannot be updated.
@@ -469,6 +470,10 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-visual-line-mode 1) ; wrap line by default
+  (use-package org
+    :config
+    (setq org-startup-indented t)
+  )
   (use-package org-re-reveal :after org)
   (require 'org-re-reveal-ref)
   (setq org-image-actual-width (/ (display-pixel-width) 3))
@@ -477,10 +482,17 @@ before packages are loaded."
      'org-babel-load-languages
      '(
        (python . t)
+       (ipython . t)
        )
      )
     )
   (setq org-agenda-files (list "~/Documents/org-file"))
+  (setq org-directory "~/Documents/org-file")
+  (setq org-capture-templates
+        '(("a" "My TODO task format." entry
+           (file "todo.org")
+           "* TODO %?
+SCHEDULED: %t")))
   (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
         TeX-view-program-list '(("PDF Tools" TeX-pdf-tools-sync-view))
         TeX-source-correlate-start-server t

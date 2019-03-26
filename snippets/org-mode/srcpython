@@ -1,0 +1,7 @@
+#key : srcpython
+#name : Org ipython block
+#contributor: Muhammad Yusuf <muhammad.yusuf@gmail.com>
+# --
+#+BEGIN_SRC ipython :session localhost :results output org drawer :exports results
+$0
+#+END_SRC
